@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fieldnote Goods — Gear for the long way round</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topo"></div>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="mark"></span> Fieldnote Goods</div>
+    <nav class="navlinks">
+      <a href="#shop">Shop</a>
+      <a href="#about">Why Us</a>
+      <a href="#footer">Contact</a>
+    </nav>
+    <div class="navactions">
+      <button id="cart-btn" aria-label="Open cart">
+        Cart <span id="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">Field-tested since 2014</div>
+    <h1>Gear built for the <em>long way round</em></h1>
+    <p>Small-batch packs, tools, and trail kit made to outlast the trip you bought them for. No seasons, no gimmicks — just things worth carrying.</p>
+    <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Browse the catalog →</button>
+    <div class="stat-row">
+      <div><span class="num">11</span><span class="label">Years on trail</span></div>
+      <div><span class="num">38</span><span class="label">Items in stock</span></div>
+      <div><span class="num">4.8★</span><span class="label">Avg. review</span></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <polyline points="40,340 90,200 140,260 190,90 240,220 290,150 340,300" fill="none" stroke="#B58B46" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+      <circle cx="190" cy="90" r="6" fill="#C1502E"/>
+      <circle cx="340" cy="300" r="6" fill="#F8F5EC"/>
+      <circle cx="40" cy="340" r="6" fill="#F8F5EC"/>
+      <text x="200" y="70" fill="#F8F5EC" font-family="Space Grotesk" font-size="12" text-anchor="middle">SUMMIT</text>
+    </svg>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="section-head">
+    <h2>The catalog</h2>
+    <span class="tag">Free shipping over ₹4000</span>
+  </div>
+  <div class="grid" id="product-grid"></div>
+</section>
+
+<div class="strip">
+  <div class="section">
+    <div class="item">
+      <h3>Lifetime repair</h3>
+      <p>Tear a strap, blow a zipper — send it back and we fix it free, forever.</p>
+    </div>
+    <div class="item">
+      <h3>Sourced honestly</h3>
+      <p>Canvas from Ahmedabad mills, hardware from family-run foundries.</p>
+    </div>
+    <div class="item">
+      <h3>Made to be used</h3>
+      <p>Every piece is tested on an actual trail before it ships, not just a bench.</p>
+    </div>
+  </div>
+</div>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="brand">Fieldnote Goods</div>
+    <div class="small">© 2026 Fieldnote Goods. A demo storefront built for learning purposes.</div>
+  </div>
+</footer>
+
+<div id="overlay"></div>
+<aside id="cart-drawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your cart</h3>
+    <button id="close-cart" aria-label="Close cart">×</button>
+  </div>
+  <div id="cart-items"></div>
+  <div class="cart-foot">
+    <div class="totals"><span>Total</span><span id="cart-total">₹0</span></div>
+    <button class="checkout-btn" id="checkout-btn">Checkout</button>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
